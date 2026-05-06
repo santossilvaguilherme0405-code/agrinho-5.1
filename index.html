@@ -2,24 +2,40 @@
 
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Agro Forte</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agro Forte — Futuro Sustentável</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header>
-  <h1>🌱 Agro Forte</h1>
+<header class="top">
+  <div class="wrap">
+    <h1>🌱 Agro Forte</h1>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#dados">Dados</a>
+    </nav>
+  </div>
 </header>
 
 <section class="hero">
-  <h1>Agro + Tecnologia 🚜</h1>
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h2>Equilíbrio entre Produção e Meio Ambiente</h2>
+    <p>Tecnologia no campo, energia limpa e monitoramento inteligente.</p>
+    <a href="#galeria" class="btn">Explorar</a>
+  </div>
 </section>
 
-<section class="container">
-  <h2>📸 Galeria</h2>
+<section id="galeria" class="container">
+  <h2>📸 Galeria Tecnológica</h2>
 
-  <input type="file" id="upload">
+  <div class="upload-area" id="dropArea">
+    <p>📤 Arraste imagens aqui ou selecione abaixo</p>
+    <input type="file" id="upload" accept="image/*" multiple>
+  </div>
 
   <div class="galeria" id="galeriaContainer">
     <img src="https://cdn.pixabay.com/photo/2016/11/29/03/53/drone-1866742_1280.jpg">
@@ -29,16 +45,42 @@
   </div>
 </section>
 
+<section id="dados" class="container dark">
+  <h2>📊 Impacto do Agro</h2>
+  <div class="stats">
+    <div><h3 id="n1">0</h3><p>Produção Sustentável</p></div>
+    <div><h3 id="n2">0</h3><p>Energia Limpa</p></div>
+    <div><h3 id="n3">0</h3><p>Tecnologia no Campo</p></div>
+  </div>
+</section>
+
 <!-- MODAL -->
 
 <div id="modal" class="modal">
   <span class="fechar">✖</span>
-  <img id="imgZoom">
   <span class="prev">❮</span>
+  <img id="imgZoom">
   <span class="next">❯</span>
 </div>
 
+<footer>
+  <p>♿ Acessível em Libras com VLibras</p>
+</footer>
+
 <script src="script.js"></script>
+
+<!-- VLibras -->
+
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
 
 </body>
 </html>
