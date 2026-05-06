@@ -4,45 +4,49 @@
 <head>
   <meta charset="UTF-8">
   <title>Agro Forte</title>
+
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
+<header class="fade">
   <h1>🌱 Agro Forte</h1>
-  <p>Futuro sustentável</p>
+  <p>Futuro sustentável com tecnologia</p>
 </header>
 
-<section class="hero">
-  <h1>Produção com tecnologia 🚜</h1>
+<nav>
+  <a href="#">Início</a>
+  <a href="#galeria">Galeria</a>
+</nav>
+
+<section class="hero fade">
+  <div class="overlay"></div>
+  <h1>Agro + Tecnologia + Sustentabilidade 🚜</h1>
 </section>
 
-<section class="container">
-  <h2>📸 Galeria</h2>
+<section id="galeria" class="container fade">
+  <h2>📸 Galeria Tecnológica</h2>
 
-  <div class="galeria">
-    <!-- DRONE PLANTAÇÃO -->
-    <img src="https://cdn.pixabay.com/photo/2016/11/29/03/53/drone-1866742_1280.jpg" onclick="abrirZoom(this)">
+  <!-- UPLOAD -->
 
-```
-<!-- ENERGIA SOLAR -->
-<img src="https://cdn.pixabay.com/photo/2016/11/18/14/00/solar-1835993_1280.jpg" onclick="abrirZoom(this)">
+  <input type="file" id="upload" accept="image/*">
 
-<!-- AGRICULTURA -->
-<img src="https://cdn.pixabay.com/photo/2017/07/13/10/07/farmer-2491169_1280.jpg" onclick="abrirZoom(this)">
-
-<!-- CAMPO -->
-<img src="https://cdn.pixabay.com/photo/2016/10/12/22/24/wheat-1738160_1280.jpg" onclick="abrirZoom(this)">
-```
-
+  <div class="galeria" id="galeriaContainer">
+    <img src="https://cdn.pixabay.com/photo/2016/11/29/03/53/drone-1866742_1280.jpg">
+    <img src="https://cdn.pixabay.com/photo/2016/11/18/14/00/solar-1835993_1280.jpg">
+    <img src="https://cdn.pixabay.com/photo/2017/07/13/10/07/farmer-2491169_1280.jpg">
+    <img src="https://cdn.pixabay.com/photo/2016/10/12/22/24/wheat-1738160_1280.jpg">
   </div>
 </section>
 
-<!-- MODAL ZOOM -->
+<!-- ZOOM COM NAVEGAÇÃO -->
 
 <div id="modal" class="modal">
-  <span class="fechar" onclick="fecharZoom()">X</span>
+  <span class="fechar" onclick="fecharZoom()">✖</span>
+  <span class="prev" onclick="trocar(-1)">❮</span>
   <img id="imgZoom">
+  <span class="next" onclick="trocar(1)">❯</span>
 </div>
 
 <script src="script.js"></script>
