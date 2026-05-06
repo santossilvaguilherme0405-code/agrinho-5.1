@@ -4,33 +4,22 @@
 <head>
   <meta charset="UTF-8">
   <title>Agro Forte</title>
-
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header class="fade">
+<header>
   <h1>🌱 Agro Forte</h1>
-  <p>Futuro sustentável com tecnologia</p>
 </header>
 
-<nav>
-  <a href="#">Início</a>
-  <a href="#galeria">Galeria</a>
-</nav>
-
-<section class="hero fade">
-  <div class="overlay"></div>
-  <h1>Agro + Tecnologia + Sustentabilidade 🚜</h1>
+<section class="hero">
+  <h1>Agro + Tecnologia 🚜</h1>
 </section>
 
-<section id="galeria" class="container fade">
-  <h2>📸 Galeria Tecnológica</h2>
+<section class="container">
+  <h2>📸 Galeria</h2>
 
-  <!-- UPLOAD -->
-
-  <input type="file" id="upload" accept="image/*">
+  <input type="file" id="upload">
 
   <div class="galeria" id="galeriaContainer">
     <img src="https://cdn.pixabay.com/photo/2016/11/29/03/53/drone-1866742_1280.jpg">
@@ -40,13 +29,13 @@
   </div>
 </section>
 
-<!-- ZOOM COM NAVEGAÇÃO -->
+<!-- MODAL -->
 
 <div id="modal" class="modal">
-  <span class="fechar" onclick="fecharZoom()">✖</span>
-  <span class="prev" onclick="trocar(-1)">❮</span>
+  <span class="fechar">✖</span>
   <img id="imgZoom">
-  <span class="next" onclick="trocar(1)">❯</span>
+  <span class="prev">❮</span>
+  <span class="next">❯</span>
 </div>
 
 <script src="script.js"></script>
