@@ -34,7 +34,7 @@ text-decoration:none;
 .hero {
 position:relative;
 height:60vh;
-background:url('https://cdn.pixabay.com/photo/2016/11/29/03/53/drone-1866742_1280.jpg') center/cover;
+background:url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1600&auto=format') center/cover;
 display:flex;
 justify-content:center;
 align-items:center;
