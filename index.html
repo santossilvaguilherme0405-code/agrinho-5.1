@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agro Forte - Futuro Sustentável</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="fade">
+  <h1>🌱 Agro Forte</h1>
+  <p>Futuro Sustentável: Equilíbrio entre Produção e Meio Ambiente</p>
+</header>
+
+<nav id="navbar">
+  <a href="#">Início</a>
+  <a href="#sobre">Sobre</a>
+  <a href="#galeria">Galeria</a>
+  <a href="#dados">Dados</a>
+  <a href="#contato">Contato</a>
+</nav>
+
+<section class="hero fade">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>O futuro do agro começa agora</h1>
+    <p>Tecnologia + Sustentabilidade + Produção</p>
+    <button onclick="scrollToSection('sobre')">Explorar</button>
+  </div>
+</section>
+
+<section class="container fade" id="sobre">
+  <h2>🌾 Sobre</h2>
+  <p>O agro moderno utiliza tecnologia para produzir mais com menos impacto ambiental.</p>
+</section>
+
+<section class="container fade" id="galeria">
+  <h2>📸 Galeria Tecnológica</h2>
+
+  <input type="file" id="upload" accept="image/*">
+
+  <div class="galeria" id="galeriaContainer">
+    <img src="https://images.unsplash.com/photo-1598514982841-4f9c3a2b1c73?q=80&w=1600&auto=format" onclick="zoomImg(this)">
+    <img src="https://cdn.pixabay.com/photo/2016/11/29/03/53/drone-1866742_1280.jpg" onclick="zoomImg(this)">
+    <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=1200&auto=format" onclick="zoomImg(this)">
+    <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?q=80&w=1200&auto=format" onclick="zoomImg(this)">
+  </div>
+</section>
+
+<div id="modal" class="modal" onclick="fecharZoom()">
+  <img id="imgZoom">
+</div>
+
+<section class="container fade" id="dados">
+  <h2>📊 Impacto do Agro</h2>
+  <div class="stats">
+    <div><h3 id="num1">0</h3><p>Produção</p></div>
+    <div><h3 id="num2">0</h3><p>Sustentabilidade</p></div>
+    <div><h3 id="num3">0</h3><p>Energia Limpa</p></div>
+  </div>
+</section>
+
+<section class="container fade" id="contato">
+  <h2>📩 Contato</h2>
+  <p>Email: contato@agrofuturo.com</p>
+</section>
+
+<footer>
+  <p>© 2026 Agro Forte</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
