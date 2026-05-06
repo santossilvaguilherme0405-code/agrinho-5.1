@@ -1,67 +1,94 @@
 body {
-margin:0;
-font-family:Arial;
-background:#e8f5e9;
+margin: 0;
+font-family: Arial;
+background: #e8f5e9;
 }
 
+/* HEADER */
 header {
-background:#2e7d32;
-color:white;
-text-align:center;
-padding:20px;
+background: #2e7d32;
+color: white;
+text-align: center;
+padding: 20px;
 }
 
+/* MENU */
+nav {
+display: flex;
+justify-content: center;
+gap: 20px;
+background: #1b5e20;
+padding: 10px;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+}
+
+/* HERO (CORRIGIDO) */
 .hero {
-height:60vh;
-background:url('https://cdn.pixabay.com/photo/2016/11/29/03/53/drone-1866742_1280.jpg') center/cover;
-display:flex;
-justify-content:center;
-align-items:center;
-color:white;
+height: 300px; /* antes estava grande demais */
+background: url('https://cdn.pixabay.com/photo/2016/11/29/03/53/drone-1866742_1280.jpg') center/cover;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
+.hero h1 {
+color: white;
+background: rgba(0,0,0,0.5);
+padding: 10px;
+border-radius: 5px;
+}
+
+/* CONTAINER */
 .container {
-padding:20px;
-text-align:center;
+padding: 20px;
+text-align: center;
+background: white; /* antes estava transparente */
 }
 
+/* GALERIA */
 .galeria {
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:10px;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 10px;
+margin-top: 20px;
 }
 
 .galeria img {
-width:100%;
-height:200px;
-object-fit:cover;
-cursor:pointer;
+width: 100%;
+height: 200px;
+object-fit: cover;
+cursor: pointer;
+border-radius: 8px;
 }
 
 /* MODAL */
 .modal {
-display:none;
-position:fixed;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.9);
-top:0;
-left:0;
-justify-content:center;
-align-items:center;
+display: none;
+position: fixed;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.9);
+top: 0;
+left: 0;
+justify-content: center;
+align-items: center;
 }
 
 .modal img {
-max-width:90%;
+max-width: 90%;
 }
 
 .fechar, .prev, .next {
-position:absolute;
-color:white;
-font-size:30px;
-cursor:pointer;
+position: absolute;
+color: white;
+font-size: 30px;
+cursor: pointer;
 }
 
-.fechar { top:20px; right:30px; }
-.prev { left:20px; top:50%; }
-.next { right:20px; top:50%; }
+.fechar { top: 20px; right: 30px; }
+.prev { left: 20px; top: 50%; }
+.next { right: 20px; top: 50%; }
