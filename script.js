@@ -1,41 +1,37 @@
+window.onload = function() {
+
 let imagens = document.querySelectorAll(".galeria img");
-let indexAtual = 0;
+let index = 0;
 
-// ANIMAÇÃO SCROLL
-window.addEventListener("scroll", () => {
-document.querySelectorAll(".fade").forEach(el => {
-if (el.getBoundingClientRect().top < window.innerHeight - 50) {
-el.classList.add("show");
-}
-});
-});
+const modal = document.getElementById("modal");
+const imgZoom = document.getElementById("imgZoom");
 
-// ZOOM
-document.querySelectorAll(".galeria img").forEach((img, index) => {
+// abrir zoom
+imagens.forEach((img, i) => {
 img.addEventListener("click", () => {
-indexAtual = index;
-abrirZoom();
+index = i;
+modal.style.display = "flex";
+imgZoom.src = img.src;
 });
 });
 
-function abrirZoom() {
-document.getElementById("modal").style.display = "flex";
-document.getElementById("imgZoom").src = imagens[indexAtual].src;
-}
+// fechar
+document.querySelector(".fechar").onclick = () => {
+modal.style.display = "none";
+};
 
-function fecharZoom() {
-document.getElementById("modal").style.display = "none";
-}
+// trocar
+document.querySelector(".prev").onclick = () => {
+index = (index - 1 + imagens.length) % imagens.length;
+imgZoom.src = imagens[index].src;
+};
 
-// TROCAR IMAGEM
-function trocar(dir) {
-indexAtual += dir;
-if (indexAtual < 0) indexAtual = imagens.length - 1;
-if (indexAtual >= imagens.length) indexAtual = imagens.length - 0;
-document.getElementById("imgZoom").src = imagens[indexAtual].src;
-}
+document.querySelector(".next").onclick = () => {
+index = (index + 1) % imagens.length;
+imgZoom.src = imagens[index].src;
+};
 
-// UPLOAD
+// upload
 const upload = document.getElementById("upload");
 const galeria = document.getElementById("galeriaContainer");
 
@@ -48,17 +44,20 @@ const img = document.createElement("img");
 img.src = e.target.result;
 
 ```
-  img.addEventListener("click", () => {
-    imagens = document.querySelectorAll(".galeria img");
-    indexAtual = imagens.length - 1;
-    abrirZoom();
-  });
+    img.addEventListener("click", () => {
+      imagens = document.querySelectorAll(".galeria img");
+      index = imagens.length - 1;
+      modal.style.display = "flex";
+      imgZoom.src = img.src;
+    });
 
-  galeria.appendChild(img);
-  imagens = document.querySelectorAll(".galeria img");
-};
-reader.readAsDataURL(file);
+    galeria.appendChild(img);
+    imagens = document.querySelectorAll(".galeria img");
+  };
+  reader.readAsDataURL(file);
+}
 ```
 
-}
 });
+
+};
