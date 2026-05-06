@@ -1,105 +1,51 @@
 body {
 margin: 0;
-font-family: 'Poppins', sans-serif;
-background: linear-gradient(#e8f5e9, #c8e6c9);
+font-family: Arial;
+background: #e8f5e9;
 }
 
 header {
-background: linear-gradient(90deg, #1b5e20, #4caf50);
-color: white;
-padding: 20px;
-text-align: center;
-}
-
-nav {
-display: flex;
-justify-content: center;
-gap: 20px;
 background: #2e7d32;
-padding: 10px;
-position: sticky;
-top: 0;
-}
-
-nav a {
 color: white;
-text-decoration: none;
-font-weight: bold;
+text-align: center;
+padding: 20px;
 }
 
 .hero {
-position: relative;
-height: 90vh;
-background: url('https://images.unsplash.com/photo-1598514982841-4f9c3a2b1c73?q=80&w=1600&auto=format') center/cover;
+height: 60vh;
+background: url('https://cdn.pixabay.com/photo/2016/11/29/03/53/drone-1866742_1280.jpg') center/cover;
 display: flex;
 align-items: center;
 justify-content: center;
-}
-
-.overlay {
-position: absolute;
-width: 100%;
-height: 100%;
-background: rgba(0,0,0,0.6);
-}
-
-.hero-content {
-position: relative;
 color: white;
-text-align: center;
-}
-
-.hero h1 {
-font-size: 3em;
-}
-
-.hero button {
-margin-top: 20px;
-padding: 12px 25px;
-border: none;
-background: #4caf50;
-color: white;
-cursor: pointer;
-border-radius: 5px;
 }
 
 .container {
-padding: 40px;
-max-width: 1100px;
-margin: auto;
-background: rgba(255,255,255,0.85);
-border-radius: 10px;
-margin-top: 20px;
+padding: 20px;
 }
 
 .galeria {
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 15px;
-margin-top: 20px;
+grid-template-columns: repeat(2, 1fr);
+gap: 10px;
 }
 
 .galeria img {
 width: 100%;
 height: 200px;
 object-fit: cover;
-border-radius: 10px;
 cursor: pointer;
-transition: 0.3s;
 }
 
-.galeria img:hover {
-transform: scale(1.08);
-}
-
+/* ZOOM */
 .modal {
 display: none;
 position: fixed;
-top: 0;
-left: 0;
 width: 100%;
 height: 100%;
 background: rgba(0,0,0,0.9);
+top: 0;
+left: 0;
 justify-content: center;
 align-items: center;
 }
@@ -109,32 +55,11 @@ max-width: 90%;
 max-height: 90%;
 }
 
-.stats {
-display: flex;
-justify-content: space-around;
-text-align: center;
-}
-
-.stats h3 {
-font-size: 2.5em;
-color: #2e7d32;
-}
-
-.fade {
-opacity: 0;
-transform: translateY(20px);
-transition: 1s;
-}
-
-.fade.show {
-opacity: 1;
-transform: translateY(0);
-}
-
-footer {
-background: #1b5e20;
+.fechar {
+position: absolute;
+top: 20px;
+right: 30px;
 color: white;
-text-align: center;
-padding: 20px;
-margin-top: 40px;
+font-size: 30px;
+cursor: pointer;
 }
