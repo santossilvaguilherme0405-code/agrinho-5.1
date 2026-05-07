@@ -12,26 +12,33 @@ document.getElementById("site").style.display = "block";
 };
 
 // GEOLOCALIZAÇÃO
-if(navigator.geolocation){
+navigator.geolocation.getCurrentPosition(
 
-```
-navigator.geolocation.getCurrentPosition(function(pos){
+function(position){
 
-  document.getElementById("cidade").innerText = "Sua Região";
+  document.getElementById("cidade").innerText =
+  "Localização Ativada";
 
   let temp = Math.floor(Math.random()*10)+22;
 
   let umi = Math.floor(Math.random()*30)+60;
 
-  document.getElementById("temperatura").innerText = temp + "°C";
+  document.getElementById("temperatura").innerText =
+  temp + "°C";
 
-  document.getElementById("umidade").innerText = umi + "%";
+  document.getElementById("umidade").innerText =
+  umi + "%";
 
-});
-```
+},
+
+function(){
+
+  document.getElementById("cidade").innerText =
+  "Localização negada";
 
 }
 
+);
 // ZOOM
 let imagens = document.querySelectorAll(".galeria img");
 
