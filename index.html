@@ -2,72 +2,122 @@
 
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Agro Forte — Futuro Sustentável</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgroVision Dashboard</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="top">
-  <div class="wrap">
-    <h1>🌱 Agro Forte</h1>
-    <nav>
-      <a href="#">Início</a>
-      <a href="#galeria">Galeria</a>
-      <a href="#dados">Dados</a>
-    </nav>
-  </div>
+<header>
+  <h1>🌱 AgroVision</h1>
+  <p>Dashboard Inteligente para Agricultura Sustentável</p>
 </header>
+
+<nav>
+  <a href="#monitoramento">Monitoramento</a>
+  <a href="#galeria">Galeria</a>
+  <a href="#sustentabilidade">Sustentabilidade</a>
+</nav>
+
+<!-- HERO -->
 
 <section class="hero">
   <div class="overlay"></div>
+
   <div class="hero-content">
-    <h2>Equilíbrio entre Produção e Meio Ambiente</h2>
-    <p>Tecnologia no campo, energia limpa e monitoramento inteligente.</p>
-    <a href="#galeria" class="btn">Explorar</a>
+    <h1>Tecnologia no Campo 🚜</h1>
+    <p>Monitoramento aéreo, energia limpa e produção sustentável</p>
   </div>
 </section>
+
+<!-- DASHBOARD -->
+
+<section id="monitoramento" class="container">
+
+  <h2>📊 Monitoramento Inteligente</h2>
+
+  <div class="cards">
+
+```
+<div class="card">
+  <h3>🌡 Temperatura</h3>
+  <p id="temp">27°C</p>
+</div>
+
+<div class="card">
+  <h3>💧 Umidade</h3>
+  <p id="umi">68%</p>
+</div>
+
+<div class="card">
+  <h3>☀ Energia Solar</h3>
+  <p id="solar">89%</p>
+</div>
+
+<div class="card">
+  <h3>🌱 Área Saudável</h3>
+  <p id="saude">92%</p>
+</div>
+```
+
+  </div>
+
+</section>
+
+<!-- GALERIA -->
 
 <section id="galeria" class="container">
-  <h2>📸 Galeria Tecnológica</h2>
 
-  <div class="upload-area" id="dropArea">
-    <p>📤 Arraste imagens aqui ou selecione abaixo</p>
-    <input type="file" id="upload" accept="image/*" multiple>
+  <h2>📸 Monitoramento Aéreo</h2>
+
+  <div class="galeria">
+
+```
+<img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200&auto=format">
+
+<img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?q=80&w=1200&auto=format">
+
+<img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200&auto=format">
+
+<img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1200&auto=format">
+```
+
   </div>
 
-  <div class="galeria" id="galeriaContainer">
-    <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200&auto=format">
-    <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?q=80&w=1200&auto=format">
-    <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200&auto=format">
-    <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1200&auto=format">
-  </div>
-</section>
-
-<section id="dados" class="container dark">
-  <h2>📊 Impacto do Agro</h2>
-  <div class="stats">
-    <div><h3 id="n1">0</h3><p>Produção Sustentável</p></div>
-    <div><h3 id="n2">0</h3><p>Energia Limpa</p></div>
-    <div><h3 id="n3">0</h3><p>Tecnologia no Campo</p></div>
-  </div>
 </section>
 
 <!-- MODAL -->
 
 <div id="modal" class="modal">
-  <span class="fechar">✖</span>
-  <span class="prev">❮</span>
+
+<span class="fechar">✖</span>
+
+<span class="prev">❮</span>
+
   <img id="imgZoom">
-  <span class="next">❯</span>
+
+<span class="next">❯</span>
+
 </div>
 
-<footer>
-  <p>♿ Acessível em Libras com VLibras</p>
-</footer>
+<!-- SUSTENTABILIDADE -->
 
-<script src="script.js"></script>
+<section id="sustentabilidade" class="container sustentabilidade">
+
+  <h2>♻ Sustentabilidade</h2>
+
+  <p>
+    O AgroVision utiliza monitoramento aéreo, energia limpa e análise inteligente
+    para aumentar a produtividade sem prejudicar o meio ambiente.
+  </p>
+
+</section>
+
+<footer>
+  <p>♿ Acessível com VLibras</p>
+</footer>
 
 <!-- VLibras -->
 
@@ -77,10 +127,14 @@
     <div class="vw-plugin-top-wrapper"></div>
   </div>
 </div>
+
 <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
 <script>
-  new window.VLibras.Widget('https://vlibras.gov.br/app');
+new window.VLibras.Widget('https://vlibras.gov.br/app');
 </script>
+
+<script src="script.js"></script>
 
 </body>
 </html>
