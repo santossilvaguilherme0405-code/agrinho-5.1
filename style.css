@@ -1,76 +1,156 @@
-body{
-margin:0;
-font-family:Arial;
-background:linear-gradient(135deg,#dff6dd,#b8e4c9,#95d5b2);
-color:#1b4332;
-}
+/* LOGIN TELA CHEIA */
 
-/* LOGIN */
 .login-screen{
-width:100%;
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
+  position:fixed;
+  top:0;
+  left:0;
+
+  width:100%;
+  height:100vh;
+
+  background:#f1f3f4;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  z-index:99999;
 }
 
-.login-box{
-background:rgba(255,255,255,0.75);
-padding:40px;
-border-radius:20px;
-backdrop-filter:blur(10px);
-text-align:center;
-box-shadow:0 0 25px rgba(0,0,0,0.15);
-width:320px;
+/* CAIXA */
+
+.google-login{
+
+  width:420px;
+
+  background:white;
+
+  border-radius:30px;
+
+  padding:40px;
+
+  box-shadow:0 0 30px rgba(0,0,0,0.1);
+
 }
 
-.login-box h1{
-margin-bottom:10px;
+/* LOGO */
+
+.google-logo{
+  width:80px;
+  margin-bottom:20px;
 }
 
-.login-box p{
-color:#2d6a4f;
+/* TITULO */
+
+.google-login h2{
+  font-size:35px;
+  color:#202124;
+  margin:0;
 }
 
-.login-box input{
-width:100%;
-padding:12px;
-margin:10px 0;
-border:none;
-border-radius:10px;
-background:white;
+.subtitle{
+  color:#5f6368;
+  margin-bottom:30px;
 }
 
-.login-box button{
-width:100%;
-padding:12px;
-border:none;
-border-radius:10px;
-background:#2d6a4f;
-color:white;
-cursor:pointer;
-font-size:15px;
+/* INPUT */
+
+.google-login input{
+
+  width:100%;
+
+  padding:18px;
+
+  border-radius:12px;
+
+  border:1px solid #ccc;
+
+  font-size:16px;
+
+  outline:none;
+
 }
 
-.social-login{
-margin-top:20px;
+/* SENHA */
+
+.senha{
+  color:#1a73e8;
+  font-size:14px;
+  cursor:pointer;
+  margin-top:15px;
 }
 
-.google{
-background:white !important;
-color:black !important;
-margin-top:10px;
-border:1px solid #ccc !important;
+/* LINHA */
+
+.linha{
+  display:flex;
+  align-items:center;
+  margin:30px 0;
 }
 
-.apple{
-background:black !important;
-color:white !important;
-margin-top:10px;
+.linha div{
+  flex:1;
+  height:1px;
+  background:#ddd;
 }
 
-.conta{
-margin-top:15px;
-font-size:14px;
-cursor:pointer;
+.linha span{
+  margin:0 15px;
+  color:#555;
+}
+
+/* GOOGLE */
+
+.google-btn{
+
+  width:100%;
+  padding:15px;
+
+  border-radius:15px;
+
+  border:1px solid #ddd;
+
+  background:white;
+
+  cursor:pointer;
+
+}
+
+.google-btn img{
+  width:35px;
+}
+
+/* BOTTOM */
+
+.bottom{
+  margin-top:40px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.bottom p{
+  color:#1a73e8;
+  cursor:pointer;
+}
+
+/* BOTÃO */
+
+#entrar{
+
+  background:black;
+
+  color:white;
+
+  border:none;
+
+  padding:15px 45px;
+
+  border-radius:15px;
+
+  cursor:pointer;
+
+  font-size:16px;
+
 }
