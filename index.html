@@ -4,61 +4,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AgroVision Dashboard</title>
+  <title>AgroVision 2.0</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- LOGIN -->
+
+<div id="loginScreen" class="login-screen">
+
+  <div class="login-box">
+
+```
+<h1>🌱 AgroVision 2.0</h1>
+
+<input type="text" placeholder="Usuário">
+
+<input type="password" placeholder="Senha">
+
+<button id="entrar">Entrar</button>
+```
+
+  </div>
+
+</div>
+
+<!-- SITE -->
+
+<div id="site" style="display:none;">
+
 <header>
-  <h1>🌱 AgroVision</h1>
-  <p>Dashboard Inteligente para Agricultura Sustentável</p>
+
+  <h1>🌱 AgroVision 2.0</h1>
+
+  <p>Tecnologia Inteligente para Agricultura Sustentável</p>
+
 </header>
 
 <nav>
-  <a href="#monitoramento">Monitoramento</a>
-  <a href="#galeria">Galeria</a>
-  <a href="#sustentabilidade">Sustentabilidade</a>
+
+<a href="#dashboard">Dashboard</a>
+
+<a href="#galeria">Galeria</a>
+
+<a href="#sustentabilidade">Sustentabilidade</a>
+
 </nav>
 
 <!-- HERO -->
 
 <section class="hero">
+
   <div class="overlay"></div>
 
   <div class="hero-content">
-    <h1>Tecnologia no Campo 🚜</h1>
-    <p>Monitoramento aéreo, energia limpa e produção sustentável</p>
+
+```
+<h1>Monitoramento Inteligente 🚜</h1>
+
+<p>Produção + Tecnologia + Meio Ambiente</p>
+```
+
   </div>
+
 </section>
 
 <!-- DASHBOARD -->
 
-<section id="monitoramento" class="container">
+<section id="dashboard" class="container">
 
-  <h2>📊 Monitoramento Inteligente</h2>
+  <h2>📊 Dashboard Agro</h2>
 
   <div class="cards">
 
 ```
 <div class="card">
+  <h3>📍 Localização</h3>
+  <p id="cidade">Carregando...</p>
+</div>
+
+<div class="card">
   <h3>🌡 Temperatura</h3>
-  <p id="temp">27°C</p>
+  <p id="temperatura">--°C</p>
 </div>
 
 <div class="card">
   <h3>💧 Umidade</h3>
-  <p id="umi">68%</p>
+  <p id="umidade">--%</p>
 </div>
 
 <div class="card">
   <h3>☀ Energia Solar</h3>
-  <p id="solar">89%</p>
-</div>
-
-<div class="card">
-  <h3>🌱 Área Saudável</h3>
-  <p id="saude">92%</p>
+  <p>89%</p>
 </div>
 ```
 
@@ -106,18 +144,23 @@
 
 <section id="sustentabilidade" class="container sustentabilidade">
 
-  <h2>♻ Sustentabilidade</h2>
+  <h2>♻ Sustentabilidade Inteligente</h2>
 
   <p>
-    O AgroVision utiliza monitoramento aéreo, energia limpa e análise inteligente
-    para aumentar a produtividade sem prejudicar o meio ambiente.
+    O AgroVision 2.0 utiliza monitoramento aéreo,
+    energia limpa e análise inteligente para aumentar
+    a produtividade sem prejudicar o meio ambiente.
   </p>
 
 </section>
 
 <footer>
-  <p>♿ Acessível com VLibras</p>
+
+  <p>♿ Sistema acessível com VLibras</p>
+
 </footer>
+
+</div>
 
 <!-- VLibras -->
 
