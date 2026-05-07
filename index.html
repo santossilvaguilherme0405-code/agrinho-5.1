@@ -1,8 +1,4 @@
-<!-- COLE ESTE FINAL NO SEU index.html -->
-
-<body>
-
-<!-- LOGIN -->
+<!-- SUBSTITUA APENAS A PARTE DO LOGIN NO index.html POR ESTA -->
 
 <div id="loginScreen" class="login-screen">
 
@@ -11,268 +7,31 @@
 ```
 <h1>🌱 AgroVision 2.0</h1>
 
+<p>Tecnologia para um agro sustentável</p>
+
 <input type="text" placeholder="Usuário">
 
 <input type="password" placeholder="Senha">
 
 <button id="entrar">Entrar</button>
-```
 
-  </div>
+<div class="social-login">
 
-</div>
+  <button class="google">
+    🌐 Entrar com Google
+  </button>
 
-<!-- SITE -->
+  <button class="apple">
+    🍎 Entrar com Apple
+  </button>
 
-<div id="site">
-
-<header>
-
-  <h1>🌱 AgroVision 2.0</h1>
-
-  <p>Tecnologia Inteligente para Agricultura Sustentável</p>
-
-</header>
-
-<nav>
-
-<a href="#dashboard">Dashboard</a>
-
-<a href="#galeria">Galeria</a>
-
-<a href="#sustentabilidade">Sustentabilidade</a>
-
-</nav>
-
-<!-- HERO -->
-
-<section class="hero">
-
-  <div class="overlay"></div>
-
-  <div class="hero-content">
-
-```
-<h1>Monitoramento Inteligente 🚜</h1>
-
-<p>Produção + Tecnologia + Meio Ambiente</p>
-```
-
-  </div>
-
-</section>
-
-<!-- DASHBOARD -->
-
-<section id="dashboard" class="container">
-
-  <h2>📊 Dashboard Agro</h2>
-
-  <div class="cards">
-
-```
-<div class="card">
-  <h3>📍 Localização</h3>
-  <p id="cidade">Permitindo localização...</p>
-</div>
-
-<div class="card">
-  <h3>🌡 Temperatura</h3>
-  <p id="temperatura">--°C</p>
-</div>
-
-<div class="card">
-  <h3>💧 Umidade</h3>
-  <p id="umidade">--%</p>
-</div>
-
-<div class="card">
-  <h3>☀ Energia Solar</h3>
-  <p>89%</p>
-</div>
-```
-
-  </div>
-
-</section>
-
-<!-- GALERIA -->
-
-<section id="galeria" class="container">
-
-  <h2>📸 Monitoramento Aéreo</h2>
-
-  <div class="galeria">
-
-```
-<img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200&auto=format">
-
-<img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?q=80&w=1200&auto=format">
-
-<img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200&auto=format">
-
-<img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1200&auto=format">
-```
-
-  </div>
-
-</section>
-
-<!-- MODAL -->
-
-<div id="modal" class="modal">
-
-<span class="fechar">✖</span>
-
-<span class="prev">❮</span>
-
-  <img id="imgZoom">
-
-<span class="next">❯</span>
-
-</div>
-
-<!-- SUSTENTABILIDADE -->
-
-<section id="sustentabilidade" class="container sustentabilidade">
-
-  <h2>♻ Sustentabilidade Inteligente</h2>
-
-  <p>
-    O AgroVision 2.0 utiliza monitoramento aéreo,
-    energia limpa e análise inteligente para aumentar
-    a produtividade sem prejudicar o meio ambiente.
+  <p class="conta">
+    Criar conta | Já possuo conta
   </p>
 
-</section>
+</div>
+```
 
-<footer>
-
-  <p>♿ Sistema acessível com VLibras</p>
-
-</footer>
+  </div>
 
 </div>
-
-<script>
-
-const site = document.getElementById("site");
-
-site.style.display = "none";
-
-// LOGIN
-document.getElementById("entrar").onclick = function(){
-
-  document.getElementById("loginScreen").style.display = "none";
-
-  site.style.display = "block";
-
-};
-
-// GEOLOCALIZAÇÃO
-navigator.geolocation.getCurrentPosition(
-
-function(position){
-
-  document.getElementById("cidade").innerText =
-  "Localização Ativada";
-
-  let temp = Math.floor(Math.random()*10)+22;
-
-  let umi = Math.floor(Math.random()*30)+60;
-
-  document.getElementById("temperatura").innerText =
-  temp + "°C";
-
-  document.getElementById("umidade").innerText =
-  umi + "%";
-
-},
-
-function(){
-
-  document.getElementById("cidade").innerText =
-  "Localização negada";
-
-}
-
-);
-
-// ZOOM
-let imagens = document.querySelectorAll(".galeria img");
-
-let index = 0;
-
-const modal = document.getElementById("modal");
-
-const imgZoom = document.getElementById("imgZoom");
-
-imagens.forEach((img,i)=>{
-
-  img.onclick = ()=>{
-
-    index = i;
-
-    modal.style.display = "flex";
-
-    imgZoom.src = imagens[index].src;
-
-  };
-
-});
-
-document.querySelector(".fechar").onclick = ()=>{
-
-  modal.style.display = "none";
-
-};
-
-document.querySelector(".next").onclick = ()=>{
-
-  index++;
-
-  if(index >= imagens.length){
-    index = 0;
-  }
-
-  imgZoom.src = imagens[index].src;
-
-};
-
-document.querySelector(".prev").onclick = ()=>{
-
-  index--;
-
-  if(index < 0){
-    index = imagens.length - 1;
-  }
-
-  imgZoom.src = imagens[index].src;
-
-};
-
-</script>
-
-<!-- VLibras -->
-
-<div vw class="enabled">
-
-<div vw-access-button class="active"></div>
-
-<div vw-plugin-wrapper>
-
-<div class="vw-plugin-top-wrapper"></div>
-
-</div>
-
-</div>
-
-<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-
-<script>
-
-new window.VLibras.Widget('https://vlibras.gov.br/app');
-
-</script>
-
-</body>
