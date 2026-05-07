@@ -1,5 +1,38 @@
 window.onload = function(){
 
+// LOGIN
+document.getElementById("entrar").onclick = function(){
+
+```
+document.getElementById("loginScreen").style.display = "none";
+
+document.getElementById("site").style.display = "block";
+```
+
+};
+
+// GEOLOCALIZAÇÃO
+if(navigator.geolocation){
+
+```
+navigator.geolocation.getCurrentPosition(function(pos){
+
+  document.getElementById("cidade").innerText = "Sua Região";
+
+  let temp = Math.floor(Math.random()*10)+22;
+
+  let umi = Math.floor(Math.random()*30)+60;
+
+  document.getElementById("temperatura").innerText = temp + "°C";
+
+  document.getElementById("umidade").innerText = umi + "%";
+
+});
+```
+
+}
+
+// ZOOM
 let imagens = document.querySelectorAll(".galeria img");
 
 let index = 0;
@@ -8,7 +41,6 @@ const modal = document.getElementById("modal");
 
 const imgZoom = document.getElementById("imgZoom");
 
-// CLIQUE NAS IMAGENS
 imagens.forEach((img,i)=>{
 
 ```
@@ -19,12 +51,12 @@ img.onclick = ()=>{
   modal.style.display = "flex";
 
   imgZoom.src = imagens[index].src;
+
 };
 ```
 
 });
 
-// FECHAR
 document.querySelector(".fechar").onclick = ()=>{
 
 ```
@@ -33,7 +65,6 @@ modal.style.display = "none";
 
 };
 
-// PRÓXIMA
 document.querySelector(".next").onclick = ()=>{
 
 ```
@@ -48,7 +79,6 @@ imgZoom.src = imagens[index].src;
 
 };
 
-// ANTERIOR
 document.querySelector(".prev").onclick = ()=>{
 
 ```
