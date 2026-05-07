@@ -13,9 +13,9 @@ site.style.display = "none";
 // botão entrar
 entrar.onclick = function(){
 
-  loginScreen.style.display = "none";
+loginScreen.style.display = "none";
 
-  site.style.display = "block";
+site.style.display = "block";
 
 };
 
@@ -24,25 +24,25 @@ navigator.geolocation.getCurrentPosition(
 
 function(position){
 
-  document.getElementById("cidade").innerText =
-  "Localização ativada";
+document.getElementById("cidade").innerText =
+"Localização ativada";
 
-  let temp = Math.floor(Math.random()*10)+22;
+let temp = Math.floor(Math.random()*10)+22;
 
-  let umi = Math.floor(Math.random()*30)+60;
+let umi = Math.floor(Math.random()*30)+60;
 
-  document.getElementById("temperatura").innerText =
-  temp + "°C";
+document.getElementById("temperatura").innerText =
+temp + "°C";
 
-  document.getElementById("umidade").innerText =
-  umi + "%";
+document.getElementById("umidade").innerText =
+umi + "%";
 
 },
 
 function(){
 
-  document.getElementById("cidade").innerText =
-  "Localização negada";
+document.getElementById("cidade").innerText =
+"Localização negada";
 
 }
 
@@ -59,45 +59,47 @@ const imgZoom = document.getElementById("imgZoom");
 
 imagens.forEach((img,i)=>{
 
-  img.onclick = ()=>{
+img.onclick = ()=>{
 
-    index = i;
+```
+index = i;
 
-    modal.style.display = "flex";
+modal.style.display = "flex";
 
-    imgZoom.src = imagens[index].src;
+imgZoom.src = imagens[index].src;
+```
 
-  };
+};
 
 });
 
 document.querySelector(".fechar").onclick = ()=>{
 
-  modal.style.display = "none";
+modal.style.display = "none";
 
 };
 
 document.querySelector(".next").onclick = ()=>{
 
-  index++;
+index++;
 
-  if(index >= imagens.length){
-    index = 0;
-  }
+if(index >= imagens.length){
+index = 0;
+}
 
-  imgZoom.src = imagens[index].src;
+imgZoom.src = imagens[index].src;
 
 };
 
 document.querySelector(".prev").onclick = ()=>{
 
-  index--;
+index--;
 
-  if(index < 0){
-    index = imagens.length - 1;
-  }
+if(index < 0){
+index = imagens.length - 1;
+}
 
-  imgZoom.src = imagens[index].src;
+imgZoom.src = imagens[index].src;
 
 };
 
