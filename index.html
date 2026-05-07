@@ -1,47 +1,126 @@
-<!-- LOGIN MODERNO -->
-<div id="loginScreen" class="login-screen">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agro Forte — Futuro Sustentável</title>
 
-  <div class="login-box-modern">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <h1>Log in</h1>
+<header class="top">
 
-    <p class="top-text">
-      Novo no AgroVision?
-      <span>Criar conta gratuita</span>
+  <div class="wrap">
+
+    <h1>🌱 Agro Forte</h1>
+
+    <nav>
+      <a href="#">Início</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#dados">Dados</a>
+    </nav>
+
+  </div>
+
+</header>
+
+<section class="hero">
+
+  <div class="overlay"></div>
+
+  <div class="hero-content">
+
+    <h2>Equilíbrio entre Produção e Meio Ambiente</h2>
+
+    <p>
+      Tecnologia no campo, energia limpa e monitoramento inteligente.
     </p>
 
-    <input type="email" placeholder="Email address">
+    <a href="#galeria" class="btn">Explorar</a>
 
-    <input type="password" placeholder="Password (8+ characters)">
+  </div>
 
-    <p class="forgot">
-      Forgot password?
-    </p>
+</section>
 
-    <button id="entrar" class="login-btn">
-      LOG IN
-    </button>
+<section id="galeria" class="container">
 
-    <div class="socials">
+  <h2>📸 Monitoramento Aéreo</h2>
 
-      <button class="social apple">
-        🍎
-      </button>
+  <div class="galeria">
 
-      <button class="social facebook">
-        f
-      </button>
+    <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200&auto=format">
 
-      <button class="social google">
-        <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png">
-      </button>
+    <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?q=80&w=1200&auto=format">
 
+    <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200&auto=format">
+
+    <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1200&auto=format">
+
+  </div>
+
+</section>
+
+<section id="dados" class="container dark">
+
+  <h2>📊 Impacto do Agro</h2>
+
+  <div class="stats">
+
+    <div>
+      <h3 id="n1">0</h3>
+      <p>Produção Sustentável</p>
     </div>
 
-    <div class="secure">
-      🔒 LOG IN WITH SSO
+    <div>
+      <h3 id="n2">0</h3>
+      <p>Energia Limpa</p>
+    </div>
+
+    <div>
+      <h3 id="n3">0</h3>
+      <p>Tecnologia no Campo</p>
     </div>
 
   </div>
 
+</section>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+
+  <span class="fechar">✖</span>
+
+  <span class="prev">❮</span>
+
+  <img id="imgZoom">
+
+  <span class="next">❯</span>
+
 </div>
+
+<footer>
+
+  <p>♿ Acessível com VLibras</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+<!-- VLibras -->
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+<script>
+new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+</body>
+</html>
