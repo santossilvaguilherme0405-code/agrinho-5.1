@@ -1,19 +1,81 @@
 window.onload = function(){
 
-const entrar = document.getElementById("entrar");
+  let imagens = document.querySelectorAll(".galeria img");
 
-const loginScreen = document.getElementById("loginScreen");
+  let index = 0;
 
-const site = document.getElementById("site");
+  const modal = document.getElementById("modal");
 
-site.style.display = "none";
+  const imgZoom = document.getElementById("imgZoom");
 
-entrar.onclick = function(){
+  imagens.forEach((img,i)=>{
 
-  loginScreen.style.display = "none";
+    img.onclick = ()=>{
 
-  site.style.display = "block";
+      index = i;
 
-};
+      modal.style.display = "flex";
+
+      imgZoom.src = imagens[index].src;
+
+    };
+
+  });
+
+  document.querySelector(".fechar").onclick = ()=>{
+
+    modal.style.display = "none";
+
+  };
+
+  document.querySelector(".next").onclick = ()=>{
+
+    index++;
+
+    if(index >= imagens.length){
+      index = 0;
+    }
+
+    imgZoom.src = imagens[index].src;
+
+  };
+
+  document.querySelector(".prev").onclick = ()=>{
+
+    index--;
+
+    if(index < 0){
+      index = imagens.length - 1;
+    }
+
+    imgZoom.src = imagens[index].src;
+
+  };
+
+  // CONTADOR
+
+  function animar(id,final){
+
+    let n = 0;
+
+    let el = document.getElementById(id);
+
+    let i = setInterval(()=>{
+
+      n++;
+
+      el.innerText = n + "%";
+
+      if(n >= final){
+        clearInterval(i);
+      }
+
+    },20);
+
+  }
+
+  animar("n1",95);
+  animar("n2",90);
+  animar("n3",98);
 
 };
