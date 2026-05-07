@@ -1,13 +1,21 @@
 window.onload = function(){
 
 // LOGIN
-document.getElementById("entrar").onclick = function(){
+const entrar = document.getElementById("entrar");
 
-```
-document.getElementById("loginScreen").style.display = "none";
+const loginScreen = document.getElementById("loginScreen");
 
-document.getElementById("site").style.display = "block";
-```
+const site = document.getElementById("site");
+
+// esconder site
+site.style.display = "none";
+
+// botão entrar
+entrar.onclick = function(){
+
+  loginScreen.style.display = "none";
+
+  site.style.display = "block";
 
 };
 
@@ -17,7 +25,7 @@ navigator.geolocation.getCurrentPosition(
 function(position){
 
   document.getElementById("cidade").innerText =
-  "Localização Ativada";
+  "Localização ativada";
 
   let temp = Math.floor(Math.random()*10)+22;
 
@@ -39,6 +47,7 @@ function(){
 }
 
 );
+
 // ZOOM
 let imagens = document.querySelectorAll(".galeria img");
 
@@ -50,53 +59,45 @@ const imgZoom = document.getElementById("imgZoom");
 
 imagens.forEach((img,i)=>{
 
-```
-img.onclick = ()=>{
+  img.onclick = ()=>{
 
-  index = i;
+    index = i;
 
-  modal.style.display = "flex";
+    modal.style.display = "flex";
 
-  imgZoom.src = imagens[index].src;
+    imgZoom.src = imagens[index].src;
 
-};
-```
+  };
 
 });
 
 document.querySelector(".fechar").onclick = ()=>{
 
-```
-modal.style.display = "none";
-```
+  modal.style.display = "none";
 
 };
 
 document.querySelector(".next").onclick = ()=>{
 
-```
-index++;
+  index++;
 
-if(index >= imagens.length){
-  index = 0;
-}
+  if(index >= imagens.length){
+    index = 0;
+  }
 
-imgZoom.src = imagens[index].src;
-```
+  imgZoom.src = imagens[index].src;
 
 };
 
 document.querySelector(".prev").onclick = ()=>{
 
-```
-index--;
+  index--;
 
-if(index < 0){
-  index = imagens.length - 1;
-}
+  if(index < 0){
+    index = imagens.length - 1;
+  }
 
-imgZoom.src = imagens[index].src;
-```
+  imgZoom.src = imagens[index].src;
 
 };
 
